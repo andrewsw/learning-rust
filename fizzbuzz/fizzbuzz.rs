@@ -1,10 +1,15 @@
 fn main() {
     for n in range(1i,101) {
-        match (n % 3, n % 5) {
-            (0, 0) => println!("fizzbuzz"),
-            (0, _) => println!("fizz"),
-            (_, 0) => println!("buzz"),
-            _      => println!("{}", n)
-        }
+        println!("{}", fizzbuzz(n));
     }
+}
+
+fn fizzbuzz(n: int) -> String {
+        match (n % 3, n % 5) {
+            (0, 0) => format!("fizzbuzz"),
+            (0, _) => format!("fizz"),
+            (_, 0) => format!("buzz"),
+            _      => format!("{}", n)
+        }
+
 }
